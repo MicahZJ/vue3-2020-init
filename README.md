@@ -408,34 +408,30 @@ app.config.globalProperties.$Http = HttpAxios;
 app.mount('#app');
 
 ```
-<<<<<<< HEAD
-=======
-### 3-7.配置element
-### 1.建立plugins文件下index文件
-```
-import { createApp } from 'vue'
-import App from '../App';
-// element ui
-import ElementPlus from 'element-plus';
-import 'element-plus/lib/theme-chalk/index.css';
 
-const app = createApp(App)
-app.use(ElementPlus);
-```
+### 3-7.配置element
+### 1.下包
+第一种 `vue add element-plus`
+
+第二种`npm install element-plus --save`/ 推荐用第二种
+
 #### 2.在main.js中导入
 ```
 import { createApp } from 'vue'
 import App from './App.vue'
 
-// 插件相关
-import './plugins/index'
+// element ui
+import ElementPlus from 'element-plus';
+// 样式加载失败，只能用CDN了
+// import 'element-plus/lib/theme-chalk/index.css';
 
-const app = createApp(App);
+const app = createApp(App)
+app.use(ElementPlus);
 
 app.mount('#app');
 
 ```
->>>>>>> master
+
 ## Project setup
 ```
 npm install
