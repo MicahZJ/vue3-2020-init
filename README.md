@@ -408,6 +408,34 @@ app.config.globalProperties.$Http = HttpAxios;
 app.mount('#app');
 
 ```
+<<<<<<< HEAD
+=======
+### 3-7.配置element
+### 1.建立plugins文件下index文件
+```
+import { createApp } from 'vue'
+import App from '../App';
+// element ui
+import ElementPlus from 'element-plus';
+import 'element-plus/lib/theme-chalk/index.css';
+
+const app = createApp(App)
+app.use(ElementPlus);
+```
+#### 2.在main.js中导入
+```
+import { createApp } from 'vue'
+import App from './App.vue'
+
+// 插件相关
+import './plugins/index'
+
+const app = createApp(App);
+
+app.mount('#app');
+
+```
+>>>>>>> master
 ## Project setup
 ```
 npm install
