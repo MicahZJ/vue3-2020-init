@@ -10,10 +10,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
-<<<<<<< HEAD
-=======
     "element-plus": "^1.0.1-beta.0",
->>>>>>> master
     "vue": "^3.0.2",
     "vue-router": "^4.0.0-rc.3"
   },

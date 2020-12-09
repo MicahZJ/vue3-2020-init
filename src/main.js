@@ -1,13 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-<<<<<<< HEAD
-// 插件相关-element
-// element ui
-=======
 // 插件相关
 import './plugins/index'
->>>>>>> master
 
 // 绑定axios到Vue原型链
 import HttpAxios from './utils/httpTool'
@@ -17,8 +12,5 @@ const app = createApp(App);
 
 app.config.globalProperties.$Http = HttpAxios;
 app.use(router);
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 app.mount('#app');
