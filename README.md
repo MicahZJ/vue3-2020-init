@@ -431,6 +431,84 @@ app.use(ElementPlus);
 app.mount('#app');
 
 ```
+### 3-8 配置vuex
+#### 1.下包
+`vue add vue-next` 或者 `npm install vuex@next --save`
+
+#### 2.配置
+在src下新建store文件夹，并建立index文件
+```
+import { createStore } from 'vuex'
+
+const store = createStore({
+  state: {
+    count: 0
+  },
+  getters: {
+    count: state => state.count,
+  },
+  mutations: {
+    increment (state) {
+      state.count++;
+      console.log(store.state.count)
+    }
+  },
+  actions: {
+  },
+  modules: {
+  }
+});
+
+export default store
+```
+在main文件中导入
+```
+// vuex
+import store from './store/index';
+app.use(store);
+```
+#### 3.使用
+这边页面是分离的，所以js和html放在两个文件里面
+```
+import { useStore } from "vuex";
+import { computed } from 'vue'
+
+export default {
+  data () {
+    return {};
+  },
+  watch: {},
+  computed: {},
+  methods: {
+    clickUp() {
+      this.increment()
+    }
+  },
+  components: {},
+  setup() {
+    // store
+    const store = useStore ();
+    return {
+      // 定义一个 mutation
+      increment: () => store.commit('increment'),
+      // 在 computed 函数中定义一个 getter
+      double: computed(() => store.getters.count)
+    }
+  }
+};
+```
+在html中使用
+```
+<template>
+  <div>
+    <span class="test">VueX4测试用例{{double}}</span>
+    <el-button type="primary" @click="clickUp">vuex按钮</el-button>
+  </div>
+</template>
+
+<script src="./control.js"></script>
+```
+
 
 ## Project setup
 ```
