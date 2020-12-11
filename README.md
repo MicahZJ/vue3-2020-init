@@ -257,57 +257,7 @@ css: {
   },
 ```
 
-### 3-5.vue-router
-#### 查看vue-router版本
-```
-npm info vue-router versions
-```
-#### 选择最后的rc版本
-```
-npm i -D uglifyjs-webpack-plugin
-```
-#### 在src下新建router文件夹，并建立index.js
-```
-import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
-import HelloWorld from '../components/HelloWorld.vue'
-
-// 构建我们的页面路由配置，可以看到，这里和原来的写法并无二致。
-const routes = [
-  {
-    path: '/',
-    component: HelloWorld
-  },
-  // {
-  //   path: '/about',
-  //   component: () => import('@/views/About.vue'),
-  // }
-];
-
-const router = createRouter({
-  // 使用 hash 模式构建路由（ url中带 # 号的那种)
-  // history: createWebHashHistory(),
-  // 使用 history 模式构建路由 （ url 中没有 # 号，但生产环境需要特殊配置）
-  history: createWebHistory(),
-  routes
-});
-export default router
-```
-#### 导入路由
-在main.js中使用
-```
-import { createApp } from 'vue'
-import App from './App.vue'
-
-// 导入路由配置
-import router from "./router";
-
-const app = createApp(App);
-// 使用路由
-app.use(router);
-app.mount('#app');
-```
-
-### 3-6.配置axios
+### 3-5.配置axios
 vue3不适用把axios绑定到原型链，在src下创建utils文件夹
 #### 新建httpTool
 ```
@@ -409,7 +359,7 @@ app.mount('#app');
 
 ```
 
-### 3-7.配置element
+### 3-6.配置element
 ### 1.下包
 第一种 `vue add element-plus`
 
@@ -431,7 +381,7 @@ app.use(ElementPlus);
 app.mount('#app');
 
 ```
-### 3-8 配置vuex
+### 3-7 配置vuex
 #### 1.下包
 `vue add vue-next` 或者 `npm install vuex@next --save`
 
@@ -508,12 +458,16 @@ export default {
 
 <script src="./control.js"></script>
 ```
-### 3-9 配置router
-#### 1.下载
+### 3-8 配置router
+#### 1.查看vue-router版本
+```
+npm info vue-router versions
+```
+#### 2.选择最后的rc版本并下载
 ```
 npm install vue-router -D
 ```
-#### 2.配置
+#### 3.配置
 ```
 import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 import HelloWorld from '../components/HelloWorld.vue'
