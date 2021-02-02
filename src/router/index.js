@@ -1,6 +1,14 @@
 import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 import HelloWorld from '../components/HelloWorld.vue'
 import store from '../store/index'
+
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css'
+
+// 简单配置
+NProgress.inc(2);
+NProgress.configure({ easing: 'ease', speed: 500, showSpinner: false }); // 动作
+
 // 构建我们的页面路由配置，可以看到，这里和原来的写法并无二致。
 const routes = [
   {
@@ -19,6 +27,15 @@ const router = createRouter({
   // 使用 history 模式构建路由 （ url 中没有 # 号，但生产环境需要特殊配置）
   history: createWebHistory(),
   routes
+});
+
+router.beforeEach((to, from, next) => {
+  NProgress.start();
+  next()
+});
+
+router.afterEach(() => {
+  NProgress.done();
 });
 
 // 路由守卫-方式一

@@ -59,11 +59,11 @@ export default {
     */
     console.log ('8. updated');
   },
-  beforeDestroy () {
+  beforeUnmount () {
     /*
     * 实例销毁之前调用，在这一步，实例仍然可用
     */
-    console.log ('9. beforeDestroy');
+    console.log ('9. beforeUnmount');
   },
   destroyed () {
     console.log ('10. destroyed');
