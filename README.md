@@ -463,9 +463,10 @@ export default {
 ```
 npm info vue-router versions
 ```
-#### 2.选择最后的rc版本并下载
+#### 2.选择4.0版本并下载
+我这里选的是4.0版本
 ```
-npm install vue-router -D
+npm install vue-router@4.0.0 -D
 ```
 #### 3.配置
 ```
