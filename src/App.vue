@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <transition name="slide-fade" mode="out-in">
-      <router-view />
-    </transition>
+    <router-view v-slot="{ Component }">
+      <transition name="slide-fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 
