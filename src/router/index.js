@@ -3,7 +3,8 @@ import HelloWorld from '../components/HelloWorld.vue'
 import store from '../store/index'
 
 import NProgress from 'nprogress';
-import 'nprogress/nprogress.css'
+// 样式加载失败，只能在CDN中引入，不解？
+// import 'nprogress/nprogress.css'
 
 // 简单配置
 NProgress.inc(2);
