@@ -1,10 +1,9 @@
-import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HelloWorld from '../components/HelloWorld.vue'
-import store from '../store/index'
+// import store from '../store/index'
 
 import NProgress from 'nprogress';
-// 样式加载失败，只能在CDN中引入，不解？
-// import 'nprogress/nprogress.css'
+import 'nprogress/nprogress.css'
 
 // 简单配置
 NProgress.inc(2);
@@ -19,6 +18,10 @@ const routes = [
   {
     path: '/vuex',
     component: () => import('@/views/vuex_page/index.vue'),
+  },
+  {
+    path: '/pug',
+    component: () => import('@/views/template_page/index.vue'),
   }
 ];
 

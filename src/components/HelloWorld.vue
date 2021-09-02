@@ -4,10 +4,12 @@
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-      <hr />
-      <router-link to="/vuex">Go to vuex</router-link>
     </p>
+    <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+    <hr />
+    <el-button>123</el-button>
+    <router-link to="/vuex">Go to vuex</router-link>
+    <router-link to="/pug"><el-button>pug</el-button></router-link>
   </div>
 </template>
 

@@ -1,5 +1,7 @@
 import { createStore, createLogger } from 'vuex'
 
+const debug = process.env.NODE_ENV !== 'production'
+
 const store = createStore({
   state: {
     count: 0

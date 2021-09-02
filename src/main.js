@@ -7,9 +7,10 @@ import HttpAxios from './utils/httpTool'
 app.config.globalProperties.$Http = HttpAxios;
 
 // element ui
-import ElementPlus from 'element-plus';
-// 样式加载失败，只能在CDN中引入，不解？
-// import 'element-plus/lib/theme-chalk/index.css';
+import installElementPlus from './plugins/element'
+installElementPlus(app);
+
+
 
 // 路由
 import router from "./router";
@@ -17,4 +18,4 @@ import router from "./router";
 // vuex
 import store from './store/index';
 
-app.use(store).use(router).use(ElementPlus).mount('#app');
+app.use(store).use(router).mount('#app');
