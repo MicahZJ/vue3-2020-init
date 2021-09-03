@@ -54,25 +54,19 @@ module.exports = {
 }
 ```
 ## 3.安装包
-### 3-1.压缩js
-在vue.config中配置
-```
-npm i -D uglifyjs-webpack-plugin
-```
-
-### 3-2.stylus
+### 3-1.stylus
 不用配置
 ```
 npm i -D stylus stylus-loader
 ```
 
-### 3-3.pug
+### 3-2.pug
 不用配置
 ```
 npm i -D pug-plain-loader pug
 ```
 
-### 3-4. vw布局
+### 3-3. vw布局
 #### 下包
 ```
 npm i -D postcss-loader postcss-px-to-viewport
@@ -102,7 +96,7 @@ module.exports = {
 }
 ```
 
-### 3-5.配置axios
+### 3-4.配置axios
 vue3不适用把axios绑定到原型链，在src下创建utils文件夹
 #### 新建httpTool
 ```
@@ -204,7 +198,7 @@ app.mount('#app');
 
 ```
 
-### 3-6.配置element
+### 3-5.配置element
 ### 1.下包
 第一种 `vue add element-plus`
 
@@ -229,7 +223,7 @@ import installElementPlus from './plugins/element'
 installElementPlus(app);
 ```
 
-### 3-7 配置vuex
+### 3-6 配置vuex
 #### 1.下包
 `vue add vue-next` 或者 `npm install vuex@next --save`
 
@@ -306,7 +300,7 @@ export default {
 
 <script src="./control.js"></script>
 ```
-### 3-8 配置router
+### 3-7 配置router
 #### 1.查看vue-router版本
 ```
 npm info vue-router versions
