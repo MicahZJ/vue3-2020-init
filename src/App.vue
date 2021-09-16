@@ -30,6 +30,16 @@ export default {
   /*margin-top: 60px;*/
 }
 
+body,div, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, p, blockquote, th, td {
+  margin:0;
+  padding:0;
+}
+
+h1, h2, h3, h4, h4, h5 {
+  margin:0;
+  padding:0;
+}
+
 /* 可以设置不同的进入和离开动画 */
 
 /* 设置持续时间和动画函数 */
