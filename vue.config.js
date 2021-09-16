@@ -13,6 +13,16 @@ module.exports = {
   productionSourceMap: false,
   // 默认情况下 babel-loader 会忽略所有 node_modules 中的文件。如果你想要通过 Babel 显式转译一个依赖，可以在这个选项中列出来
   transpileDependencies: [],
+  chainWebpack: (config) => {
+    config.resolve.symlinks(true) // 修复热更新失效
+    config.module.rule('images')
+      .use('url-loader')
+      .options({
+        name: 'img/[name].[hash:8].[ext]',
+        esModule: false,
+      })
+      .end()
+  },
   devServer: {
     disableHostCheck: true,
     port: '', // 端口号
